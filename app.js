@@ -5,7 +5,7 @@ searchBtn.addEventListener('click', function(){
     document.getElementById('book-store').textContent='';
     document.getElementById('result-found').textContent='';
     const search = searchInput.value;
-    const url = `http://openlibrary.org/search.json?q=${search}`;
+    const url = `https://openlibrary.org/search.json?q=${search}`;
     fetch(url)
     .then(res => res.json())
     .then(data => displayResult(data));
